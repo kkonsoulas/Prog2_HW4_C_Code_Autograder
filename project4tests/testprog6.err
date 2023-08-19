@@ -1,0 +1,7 @@
+project4tests/testprog6.c: In function ‘main’:
+project4tests/testprog6.c:6:21: warning: implicit declaration of function ‘atoi’ [-Wimplicit-function-declaration]
+    6 |                 if (atoi(argv[i]) != 0) {
+      |                     ^~~~
+project4tests/testprog6.c:13:9: warning: statement with no effect [-Wunused-value]
+   13 |         1;
+      |         ^

@@ -1,0 +1,12 @@
+for i = 0: pipe:1 ,buffer:1
+for i = 1: pipe:0 ,buffer:0
+for i = 2: pipe:  ,buffer: 
+for i = 3: pipe:t ,buffer:t
+for i = 4: pipe:h ,buffer:h
+for i = 5: pipe:e ,buffer:e
+for i = 6: pipe:  ,buffer: 
+for i = 7: pipe:e ,buffer:E
+for i = 8: pipe:n ,buffer:N
+for i = 9: pipe:d ,buffer:D
+for i = 10: pipe:  ,buffer:
+

@@ -1,0 +1,7 @@
+project4tests/testprog9.c: In function ‘main’:
+project4tests/testprog9.c:13:9: warning: implicit declaration of function ‘kill’ [-Wimplicit-function-declaration]
+   13 |         kill(getpid(), sig);
+      |         ^~~~
+project4tests/testprog9.c:6:15: warning: unused variable ‘j’ [-Wunused-variable]
+    6 |         int i,j;
+      |               ^

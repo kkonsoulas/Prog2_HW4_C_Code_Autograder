@@ -1,0 +1,130 @@
+For tests that examine basic application behavior (not similar
+topics like makefiles etc) we give you the files identified as
+main program arguments and which always have the form:
+ 
+testprogX.c // code to be evaluated by the main program
+testprogX.args // arguments for the program found in testprogX.c
+import testprogX.in // for the program found in testprogX.c
+testprogX.out // expected output for the program found in testprogX.c
+
+where X is the serial number of the particular test.
+
+In the tests we give you the files above, autolab is run
+ 
+./project4 testprogX.c testprogX.args testprogX.in testprogX.out
+
+and compares the output of project4 with the contents of the testX.out file
+which includes the expected performance of the main program since then
+runs with the above arguments.
+
+testX.out is also available.
+
+================================================= ======================== ========================== ==
+test0:
+Checks the correctness of the Makefile (to the extent that it can be checked automatically...
+ 
+There are no control files for this test.
+
+================================================= ======================== ========================== ==
+test 1:
+Checks the behavior of the main program if it is run with the wrong number of arguments.
+ 
+Includes 6 mini-tests where each uses a different (and always wrong)
+number of arguments.
+There are no control files for this test.
+
+================================================= ======================== ========================== ==
+test2:
+Controls the behavior of the main program if the program code
+to be rated has compilation errors.
+ 
+We give you the files testprog2.c, testprog2.in, testprog2.args, testprog2.out
+and test2.out
+
+================================================= ======================== ========================== ==
+test 3:
+Controls the behavior of the main program if the program code
+to be rated has compilation errors.
+ 
+We give you the files testprog3.c, testprog3.in, testprog3.args, testprog3.out
+and test3.out
+
+================================================= ======================== ========================== ==
+test 4:
+test4 only tests the p4diff.c program.
+ 
+Its goals are (a) to simulate writing in A piping with fewer or
+more bytes than the 64 that the p4diff program reads each time and
+(b) check the correctness of p4diff results without getting involved;
+the main program.
+ 
+It is split into 5 mini-tests each running ./p4diff with an argument
+a test4X_golden file (which includes the sample output of a
+hypothetical program) and by conventional import the contents of the file
+test4X_in. X takes the values a, b, c, d, e (one for each test)
+
+You can perform similar checks by running:
+./p4diff test4X_golden < test4X_in
+echo $?
+
+Remember echo $? prints the return value of the last program
+which was executed. It should print you the same number you see on
+file test4X_result.
+
+We give you the files
+test4a_in, test4a_golden, test4a_result
+test4b_in, test4b_golden, test4b_result
+test4c_in, test4c_golden, test4c_result
+test4d_in, test4d_golden, test4d_result
+test4e_in, test4e_golden, test4e_result
+
+================================================= ======================== ========================== ==
+test 5:
+Conventional execution of the main program with the code to be graded
+not to use arguments and not to read from its conventional input.
+The output of the code to be graded is correct.
+
+We give you the files testprog5.c, testprog5.in, testprog5.args, testprog5.out
+and test5.out
+
+================================================= ======================== ========================== ==
+test 6:
+Conventional execution of the main program with the code to be graded
+have warnings, use arguments, and read from its conventional input.
+The output of the code to be graded is correct.
+
+We give you the files testprog6.c, testprog6.in, testprog6.args, testprog6.out
+and test6.out
+
+================================================= ======================== ========================== ==
+test7:
+Conventional execution of the main program with the code to be graded
+to take no arguments and read from its conventional input.
+The output of the code to be graded is incorrect.
+
+We give you the files testprog7.c, testprog7.in, testprog7.args, testprog7.out
+and test7.out
+
+================================================= ======================== ========================== ==
+test 8:
+Conventional execution of the main program with the code to be graded
+have warnings, use arguments, and read from its conventional input.
+The output of the code to be graded is incorrect
+=============================================================================
+
+test9:
+Conventional execution of the main program with the code to be graded
+to have warnings and terminate with SIGABRT.
+The output of the code to be graded is incorrect.
+
+We give you the files testprog9.c, testprog9.in, testprog9.args, testprog9.out
+and test9.out
+
+================================================= ===========================
+test10:
+Conventional execution of the main program with the code to be graded
+to terminate with SIGINT.
+The output of the code to be graded is incorrect.
+
+We give you the files testprog10.c, testprog10.in, testprog10.args, testprog10.out
+and test10.out
